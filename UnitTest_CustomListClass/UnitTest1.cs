@@ -29,7 +29,7 @@ namespace UnitTest_CustomListClass
         public void test2()
         {
             //Arrange(set up)
-            CustomList<int> numbers = new CustomList<int>();
+            CustomList<string> numbers = new CustomList<string>();
             //Act(method we are testing)
             //Assert(what it is that we are determining)
         }
