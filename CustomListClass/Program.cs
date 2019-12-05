@@ -16,6 +16,19 @@ namespace CustomListClass
             numbers.Add(6);
             numbers.Add(8);
             numbers.Add(10);
+
+            //int[] one = new int[4];
+            //one[0] = 2;
+            //one[1] = 4;
+            //one[2] = 6;
+            //one[3] = 8;
+
+            //int[] two = new int[8];
+            //two[4] = 10;
+
+            CustomList<int> myNumbers = new CustomListClass<int>();
+
+
         }
     }
 }
