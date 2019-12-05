@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace CustomListClass
 {
-    public class CustomList[T]
+    
+    public class CustomList<T>
     {
 
     }
