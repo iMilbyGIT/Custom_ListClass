@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29519.181
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomListClass", "CustomListClass\CustomListClass.csproj", "{A00537F8-7C6B-40F9-8D29-A489E1C44BC8}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A00537F8-7C6B-40F9-8D29-A489E1C44BC8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A00537F8-7C6B-40F9-8D29-A489E1C44BC8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A00537F8-7C6B-40F9-8D29-A489E1C44BC8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A00537F8-7C6B-40F9-8D29-A489E1C44BC8}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {AD1DF64C-9073-4178-8956-16C0701930B4}
+	EndGlobalSection
+EndGlobal
