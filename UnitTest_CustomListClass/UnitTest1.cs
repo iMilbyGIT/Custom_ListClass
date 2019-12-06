@@ -44,40 +44,28 @@ namespace UnitTest_CustomListClass
             Assert.AreEqual(expectedResult, result);
         }
         [TestMethod]
-        public void test3()
+        public void Add_VerifyStringIndexValue()
         {
             //Arrange(set up)
             CustomList<string> numbers = new CustomList<string>();
-            numbers.Add("Larry");
-            numbers.Add("Gary");
-            numbers.Add("Jerry");
-            numbers.Add("Terry");
-            numbers.Add("Corey");
-            string result;
+            string name1 = "Larry";
+            string name2 = "Gary";
+            string name3 = "Terry";
+            string name4 = "Kerry";
+            string name5 = "Jerry";     
+                       
+            numbers.Add(name1);
+            numbers.Add(name2);
+            numbers.Add(name3);
+            numbers.Add(name4);
+            numbers.Add(name5);
+            string actual;
             string expectedResult = "Larry";
 
             //Act(method we are testing)
-            result = numbers[0];
+            actual = numbers[0];
             //Assert(what it is that we are determining)
-            Assert.AreEqual(expectedResult, result);
-        }
-
-        [TestMethod]
-        public void test4()
-        {
-            //Arrange(set up)
-            CustomList<int> numbers = new CustomList<int>();
-            //Act(method we are testing)
-            //Assert(what it is that we are determining)
-        }
-
-        [TestMethod]
-        public void test5()
-        {
-            //Arrange(set up)
-            CustomList<int> numbers = new CustomList<int>();
-            //Act(method we are testing)
-            //Assert(what it is that we are determining)
+            Assert.AreEqual(expectedResult, actual);
         }
     }
 }

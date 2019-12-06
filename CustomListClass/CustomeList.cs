@@ -7,11 +7,12 @@ using System.Threading.Tasks;
 namespace CustomListClass
 {
 
-    public class CustomList<T> where T : new()
+    public class CustomList<T> //where T : new()
     {
         private int count;
         private int capacity;
         private T[] array;
+        
         public int Count
         {
             get
@@ -26,11 +27,22 @@ namespace CustomListClass
                 return capacity;
             }
         }
-        public T[] Array
+        //public T[] Array
+        //{
+        //    get
+        //    {
+        //        return array;
+        //    }
+        //}
+        public T this[int index] 
         {
             get
             {
-                return array;
+                return array[index];
+            }
+            set
+            {
+                array[index] = value;
             }
         }
         public CustomList()
@@ -48,9 +60,11 @@ namespace CustomListClass
             }
             else
             {
-                capacity *= 2;
+                capacity *= 2; //if we don't have space left in the array, trash old and create new with double the capacity
                 T[] temp = new T[capacity];
             }
+
+
         }
     }
 }
