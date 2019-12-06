@@ -60,10 +60,10 @@ namespace UnitTest_CustomListClass
             numbers.Add(name4);
             numbers.Add(name5);
             string actual;
-            string expectedResult = "Larry";
+            string expectedResult = "Gary";
 
             //Act(method we are testing)
-            actual = numbers[0];
+            actual = numbers[1];
             //Assert(what it is that we are determining)
             Assert.AreEqual(expectedResult, actual);
         }

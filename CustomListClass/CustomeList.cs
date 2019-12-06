@@ -11,7 +11,7 @@ namespace CustomListClass
     {
         private int count;
         private int capacity;
-        private T[] array;
+        private readonly T[] array;
         
         public int Count
         {
@@ -27,13 +27,6 @@ namespace CustomListClass
                 return capacity;
             }
         }
-        //public T[] Array
-        //{
-        //    get
-        //    {
-        //        return array;
-        //    }
-        //}
         public T this[int index] 
         {
             get
