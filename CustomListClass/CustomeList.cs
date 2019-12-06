@@ -26,6 +26,13 @@ namespace CustomListClass
                 return capacity;
             }
         }
+        public T[] Array
+        {
+            get
+            {
+                return array;
+            }
+        }
         public CustomList()
         {
             count = 0;
