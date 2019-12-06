@@ -8,7 +8,7 @@ namespace UnitTest_CustomListClass
     public class UnitTest1
     {
         [TestMethod]
-        public void Add_ObjectsToList()
+        public void Add_IntObjectsToList()
         {
             //Arrange(set up)
             CustomList<int> numbers = new CustomList<int>();
@@ -26,7 +26,8 @@ namespace UnitTest_CustomListClass
             Assert.AreEqual(expectedResult, result);
         }
         [TestMethod]
-        public void test2()
+        public void Add_StringObjectsToList()
+
         {
             //Arrange(set up)
             CustomList<string> numbers = new CustomList<string>();
@@ -35,8 +36,8 @@ namespace UnitTest_CustomListClass
             numbers.Add("6");
             numbers.Add("8");
             numbers.Add("10");
-            double result;
-            double expectedResult = 5;
+            int result;
+            int expectedResult = 5;
             //Act(method we are testing)
             result = numbers.Count;
             //Assert(what it is that we are determining)
@@ -46,9 +47,19 @@ namespace UnitTest_CustomListClass
         public void test3()
         {
             //Arrange(set up)
-            CustomList<bool> numbers = new CustomList<bool>();
+            CustomList<string> numbers = new CustomList<string>();
+            numbers.Add("Larry");
+            numbers.Add("Gary");
+            numbers.Add("Jerry");
+            numbers.Add("Terry");
+            numbers.Add("Corey");
+            string result;
+            string expectedResult = "Larry";
+
             //Act(method we are testing)
+            result = numbers[0];
             //Assert(what it is that we are determining)
+            Assert.AreEqual(expectedResult, result);
         }
 
         [TestMethod]
