@@ -10,10 +10,18 @@ namespace CustomListClass
 
     public class CustomList<T> :IEnumerable
     {
+
         private int count;
         private int capacity;
         private T[] array;
-        
+
+        public IEnumerator GetEnumerator()
+        {
+            for (int i = 0; i < array.Length; i++)
+            {
+                yield return array[i];
+            }
+        }
         public int Count
         {
             get
@@ -65,13 +73,13 @@ namespace CustomListClass
             }
             count++;
         }
-
-        public IEnumerator GetEnumerator()
+        public void Remove(T value)
         {
-            for (int i = 0; i < array.Length; i++)
-            {
-                yield return array[i];
-            }
+
+        }
+        public void RemoveAt(T index)
+        {
+
         }
     }
 }
