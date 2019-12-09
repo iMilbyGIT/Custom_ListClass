@@ -17,11 +17,11 @@ namespace UnitTest_CustomListClass
             numbers.Add(6);
             numbers.Add(8);
             numbers.Add(10);
-            double result;
-            double expectedResult = 5;
+            int result;
+            int expectedResult = 10;
 
             //Act(method we are testing)
-            result = numbers.Count;
+            result = numbers[4];
             //Assert(what it is that we are determining)
             Assert.AreEqual(expectedResult, result);
         }
