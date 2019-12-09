@@ -53,18 +53,14 @@ namespace CustomListClass
             }
             else if (count == capacity) //if we dont have space left in the array
             {
-                capacity = capacity* 2;
+                capacity *= 2;
                 T[] tempRay = new T[capacity];
 
-                for (int i = 0; i<count; i++)
-                {
-                    tempRay[i] = array[i];
-                }
-                    array = new T[capacity];
-                for (int a = 0; a<count; a++)
-                {
-                    array[a] = tempRay[a];
-                }
+                    for (int i = 0; i<count; i++)
+                    {
+                        tempRay[i] = array[i];
+                    }
+                array = tempRay;
                 array[count] = value;
             }
             count++;
