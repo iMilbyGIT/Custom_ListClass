@@ -49,14 +49,14 @@ namespace CustomListClass
             if (count != capacity) //if we have space left in the array 
             {
                 array[count] = value;
-                count++;
+                
             }
             else
             {
                 capacity *= 2; //if we don't have space left in the array, trash old and create new with double the capacity
                 T[] temp = new T[capacity];
             }
-
+            count++;
 
         }
     }

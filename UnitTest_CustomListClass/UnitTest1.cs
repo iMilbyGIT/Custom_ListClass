@@ -18,7 +18,7 @@ namespace UnitTest_CustomListClass
             numbers.Add(8);
             numbers.Add(10);
             double result;
-            double expectedResult = 4;
+            double expectedResult = 5;
 
             //Act(method we are testing)
             result = numbers.Count;
@@ -37,7 +37,7 @@ namespace UnitTest_CustomListClass
             numbers.Add("8");
             numbers.Add("10");
             int result;
-            int expectedResult = 4;
+            int expectedResult = 5;
             //Act(method we are testing)
             result = numbers.Count;
             //Assert(what it is that we are determining)
