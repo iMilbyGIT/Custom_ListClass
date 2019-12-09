@@ -74,11 +74,11 @@ namespace UnitTest_CustomListClass
         {
             //Arrange(set up)
             CustomList<string> firstnames = new CustomList<string>() { "Larry", "Gary", "Terry", "Kerry", "Jerry", "Mary", "Harry", "Dairy", "Perry" };
-            firstnames.Remove("Larry");
             string actual;
             string expectedResult = "Gary";
 
             //Act(method we are testing)
+            firstnames.Remove("Larry");
             actual = firstnames[0];
 
             //Assert(what it is that we are determining)
@@ -89,18 +89,18 @@ namespace UnitTest_CustomListClass
         {
             //Arrange(set up)
             CustomList<int> singledigits = new CustomList<int>() {1, 2, 3, 4, 5, 6, 7, 8, 9};
-            singledigits.RemoveAt(4);
             int actual;
-            int expectedResult = 7;
+            int expectedResult = 8;
 
             //Act(method we are testing)
+            singledigits.Remove(4);
             actual = singledigits.Count;
 
             //Assert(what it is that we are determining)
             Assert.AreEqual(expectedResult, actual);
         }
         [TestMethod]
-        public void RemoveAt_NameIndexLocation()
+        public void RemoveAt_NameIndexLocation()   //more than one version of an element. more than one "gary". remove something that isnt in the set
         {
             //Arrange(set up)
             CustomList<int> reversesingledigits = new CustomList<int>() { 9, 8, 7, 6, 5, 4, 3, 2, 1 };
