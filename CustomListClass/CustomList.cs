@@ -12,7 +12,7 @@ namespace CustomListClass
     {
         private int count;
         private int capacity;
-        private readonly T[] array;
+        private T[] array;
         
         public int Count
         {
@@ -51,16 +51,23 @@ namespace CustomListClass
             {
                 array[count] = value;
             }
-            else
+            else if (count == capacity) //if we dont have space left in the array
             {
-                capacity *= 2; //if we don't have space left in the array, trash old and create new with double the capacity
-                T[] tempArray = new T[capacity];
-                tempArray + 
+                capacity = capacity* 2;
+                T[] tempRay = new T[capacity];
 
-
+                for (int i = 0; i<count; i++)
+                {
+                    tempRay[i] = array[i];
+                }
+                    array = new T[capacity];
+                for (int a = 0; a<count; a++)
+                {
+                    array[a] = tempRay[a];
+                }
+                array[count] = value;
             }
             count++;
-
         }
 
         public IEnumerator GetEnumerator()
