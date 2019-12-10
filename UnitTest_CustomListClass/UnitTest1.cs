@@ -114,5 +114,20 @@ namespace UnitTest_CustomListClass
             //Assert(what it is that we are determining)
             Assert.AreEqual(expectedResult, actual);
         }
+        [TestMethod]
+        public void ToString_OverrideTest()
+        {
+
+        }
+        [TestMethod]
+        public void PlusOperator_OverloadTest()
+        {
+
+        }
+        [TestMethod]
+        public void MinusOperator_OverloadTest()
+        {
+
+        }
     }
 }
