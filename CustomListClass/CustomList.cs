@@ -121,13 +121,11 @@ namespace CustomListClass
                 foreach (T value in this)
                 {
                     if (string.IsNullOrEmpty(stringVal))
-                    stringVal += value.ToString();
+                        stringVal += value.ToString();
                     else
-                    stringVal += string.Format(", {0}", value);
+                        stringVal += string.Format(", {0}", value);
                 }
                 return stringVal; 
         }
-        //public static CustomList operator -(CustomList l1)
-        //{ }
     }
 }

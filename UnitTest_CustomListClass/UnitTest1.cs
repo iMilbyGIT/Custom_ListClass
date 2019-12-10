@@ -138,31 +138,31 @@ namespace UnitTest_CustomListClass
             //Assert(what it is that we are determining)
             Assert.AreEqual(expectedResult, actual);
         }
-        //[TestMethod]
-        //public void PlusOperator_OverloadTest()
-        //{
-        //    //Arrage(set up)
-        //    CustomList<int> one = new CustomList<int>() { 1, 3, 5 };
-        //    CustomList<int> two = new CustomList<int>() { 2, 4, 6 };
-        //    int actual;
-        //    int expectedResult = one + two;
-        //    //Act(method we are using)
-        //    actual = [1,3,5,2,4,6];
-        //    //Assert(what it is that we are determining)
-        //    Assert.AreEqual(expectedResult, actual);
-        //}
-        //[TestMethod]
-        //public void MinusOperator_OverloadTest()
-        //{
-        //    //Arrage(set up)
-        //    CustomList<int> one = new CustomList<int>() { 1, 3, 5 };
-        //    CustomList<int> two = new CustomList<int>() { 2, 1, 6 };
-        //    int actual;
-        //    int expectedResult = one - two;
-        //    //Act(method we are using)
-        //    actual = [3, 5];
-        //    //Assert(what it is that we are determining)
-        //    Assert.AreEqual(expectedResult, actual);
-        //}
+        [TestMethod]
+        public void PlusOperator_OverloadTest()
+        {
+            //Arrage(set up)
+            CustomList<int> one = new CustomList<int>() { 1, 3, 5 };
+            CustomList<int> two = new CustomList<int>() { 2, 4, 6 };
+            int actual;
+            int expectedResult = one + two;
+            //Act(method we are using)
+            actual = [1, 3, 5, 2, 4, 6];
+            //Assert(what it is that we are determining)
+            Assert.AreEqual(expectedResult, actual);
+        }
+        [TestMethod]
+        public void MinusOperator_OverloadTest()
+        {
+            //Arrage(set up)
+            CustomList<int> one = new CustomList<int>() { 1, 3, 5 };
+            CustomList<int> two = new CustomList<int>() { 2, 1, 6 };
+            int actual;
+            int expectedResult = one - two;
+            //Act(method we are using)
+            actual = [3, 5];
+            //Assert(what it is that we are determining)
+            Assert.AreEqual(expectedResult, actual);
+        }
     }
 }
