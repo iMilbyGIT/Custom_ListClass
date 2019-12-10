@@ -17,7 +17,7 @@ namespace CustomListClass
 
         public IEnumerator GetEnumerator()
         {
-            for (int i = 0; i < array.Length; i++)
+            for (int i = 0; i < Count; i++)
             {
                 yield return array[i];
             }
@@ -117,15 +117,30 @@ namespace CustomListClass
         }
         public override string ToString()
         {         
-                string stringVal = string.Empty;
+                string nowastring = string.Empty;
                 foreach (T value in this)
                 {
-                    if (string.IsNullOrEmpty(stringVal))
-                        stringVal += value.ToString();
+                // T defaultValue = default(T);
+                    if (string.IsNullOrEmpty(nowastring))
+                    nowastring += value.ToString();
                     else
-                        stringVal += string.Format(", {0}", value);
+                    nowastring += string.Format(", {0}", value);
                 }
-                return stringVal; 
+                return nowastring; 
+        }
+        public static CustomList<T> operator + (CustomList<T> b, CustomList<T> c)
+        {
+            CustomList<T> list = new CustomList<T>();
+            list.count = b.Count + c.Count;
+            list.capacity = b.Capacity + c.Capacity;
+            return list;
+        }
+        public static CustomList<T> operator - (CustomList<T> b, CustomList<T> c)
+        {
+            CustomList<T> list = new CustomList<T>();
+            list.count = b.Count - c.Count;
+            list.capacity = b.Capacity - c.Capacity;
+            return list;
         }
     }
 }

@@ -144,8 +144,9 @@ namespace UnitTest_CustomListClass
             //Arrage(set up)
             CustomList<int> one = new CustomList<int>() { 1, 3, 5 };
             CustomList<int> two = new CustomList<int>() { 2, 4, 6 };
-            int actual;
-            int expectedResult = one + two;
+            CustomList<int> actual;
+            CustomList<int> three = one + two;
+            CustomList<int> expectedResult = three;
             //Act(method we are using)
             actual = [1, 3, 5, 2, 4, 6];
             //Assert(what it is that we are determining)
@@ -157,8 +158,9 @@ namespace UnitTest_CustomListClass
             //Arrage(set up)
             CustomList<int> one = new CustomList<int>() { 1, 3, 5 };
             CustomList<int> two = new CustomList<int>() { 2, 1, 6 };
-            int actual;
-            int expectedResult = one - two;
+            CustomList<int> actual;
+            CustomList<int> newone = one - two;
+            CustomList<int> expectedResult = newone;
             //Act(method we are using)
             actual = [3, 5];
             //Assert(what it is that we are determining)
