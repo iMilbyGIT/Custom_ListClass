@@ -116,5 +116,9 @@ namespace CustomListClass
             }
 
         }
+        public override string ToString()
+        {
+            return base.ToString();
+        }
     }
 }
