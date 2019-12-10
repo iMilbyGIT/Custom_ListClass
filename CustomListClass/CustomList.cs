@@ -47,7 +47,7 @@ namespace CustomListClass
                 array[index] = value;
             }
         }
-        public CustomList()
+        public CustomList() : base()
         {
             count = 0;
             capacity = 4;
@@ -114,13 +114,20 @@ namespace CustomListClass
             {
                 throw new ArgumentOutOfRangeException();
             }
-
         }
         public override string ToString()
-        {
-            return base.ToString();
+        {         
+                string stringVal = string.Empty;
+                foreach (T value in this)
+                {
+                    if (string.IsNullOrEmpty(stringVal))
+                    stringVal += value.ToString();
+                    else
+                    stringVal += string.Format(", {0}", value);
+                }
+                return stringVal; 
         }
-        public static CustomList operator -(CustomList l1)
-        { }
+        //public static CustomList operator -(CustomList l1)
+        //{ }
     }
 }
