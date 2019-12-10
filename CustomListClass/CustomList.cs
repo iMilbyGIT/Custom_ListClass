@@ -75,10 +75,45 @@ namespace CustomListClass
         }
         public void Remove(T value)
         {
-
+            int index = -1;
+            for (int i = 0; i < count; i++)
+            {
+                if (array[i].Equals(value))
+                {
+                    index = i;
+                    break;
+                }
+            }            
+            if (index >= 0 && index < count)
+            {
+                RemoveAt(index);
+            }
+            else if (index != -1)
+            {
+                throw new ArgumentOutOfRangeException();
+            }
         }
-        public void RemoveAt(T index)
+        public void RemoveAt(int index)
         {
+            if (index >= 0 && index < count)
+            {
+                for (int i = index; i < count; i++)
+                {
+                    if (i != count - 1)
+                    {
+                        array[i] = array[i + 1];
+                    }
+                    else
+                    {
+                        array[i] = default;
+                    }
+                }
+                count--;
+            }
+            else
+            {
+                throw new ArgumentOutOfRangeException();
+            }
 
         }
     }
