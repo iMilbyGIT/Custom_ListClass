@@ -104,11 +104,11 @@ namespace UnitTest_CustomListClass
         {
             //Arrange(set up)
             CustomList<int> reversesingledigits = new CustomList<int>() { 9, 8, 7, 6, 5, 4, 3, 2, 1 };
-            reversesingledigits.RemoveAt(0);
             int actual;
             int expectedResult = 8;
 
             //Act(method we are testing)
+            reversesingledigits.RemoveAt(0);
             actual = reversesingledigits[0];
 
             //Assert(what it is that we are determining)
@@ -117,17 +117,40 @@ namespace UnitTest_CustomListClass
         [TestMethod]
         public void ToString_OverrideTest()
         {
-
+            //Arrage(set up)
+            CustomList<int> one = new CustomList<int>() { 1, 3, 5 };
+            string actual;
+            string expectedResult = "135";
+            //Act(method we are using)
+            actual = one.ToString();
+            //Assert(what it is that we are determining)
+            Assert.AreEqual(expectedResult, actual);
         }
         [TestMethod]
         public void PlusOperator_OverloadTest()
         {
-
+            //Arrage(set up)
+            CustomList<int> one = new CustomList<int>() { 1, 3, 5 };
+            CustomList<int> two = new CustomList<int>() { 2, 4, 6 };
+            int actual;
+            int expectedResult = one + two;
+            //Act(method we are using)
+            actual = [1,3,5,2,4,6];
+            //Assert(what it is that we are determining)
+            Assert.AreEqual(expectedResult, actual);
         }
         [TestMethod]
         public void MinusOperator_OverloadTest()
         {
-
+            //Arrage(set up)
+            CustomList<int> one = new CustomList<int>() { 1, 3, 5 };
+            CustomList<int> two = new CustomList<int>() { 2, 1, 6 };
+            int actual;
+            int expectedResult = one - two;
+            //Act(method we are using)
+            actual = [3, 5];
+            //Assert(what it is that we are determining)
+            Assert.AreEqual(expectedResult, actual);
         }
     }
 }

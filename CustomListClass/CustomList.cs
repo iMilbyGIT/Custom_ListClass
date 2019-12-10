@@ -120,5 +120,7 @@ namespace CustomListClass
         {
             return base.ToString();
         }
+        public static CustomList operator -(CustomList l1)
+        { }
     }
 }
